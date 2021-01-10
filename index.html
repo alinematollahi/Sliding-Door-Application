@@ -1,0 +1,255 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Sliding Door Simulator & Invoice Calculator Application</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body onresize="setAnimation()">
+    <div ng-app="myapp" ng-controller="myctrl">
+
+        <div id="start">
+            <div id="start-part1">
+                Welcome to
+                <br>
+                Automatic Sliding Door Simulator & Invoice Calculator
+            </div>
+            <div id="start-part2">
+                Click the button below to get started
+
+                <button onclick="start()">
+                    START
+                </button>
+            </div>
+        </div>
+
+        <div id="input-container">
+            <div id="part0">
+                Enter the Gate Characteristics
+            </div>
+            <form>
+                <div id="part1">
+                    <div class="input-label">
+                        Door Width
+                    </div>
+                    <div class="input">
+                        <input id="inp1" type="text" ng-model="width" placeholder="enter width (cm)">
+                    </div>
+                    <div class="detail" id="width-detail">
+                        Enter a number between 80 and 600
+                    </div>
+                    <div class="input-label">
+                        Door Height
+                    </div>
+                    <div class="input">
+                        <input id="inp2" type="text" ng-model="height" placeholder="enter height (cm)"
+                            onchange="setAnimation()">
+                    </div>
+                    <div class="detail" id="height-detail">
+                        Enter a number between 180 and 300
+                    </div>
+                    <div class="input-label">
+                        Number and Type of Doors
+                    </div>
+                    <div class="input">
+                        <select id="dtype" ng-model="doorstype" onchange="setAnimation()">
+                            <option value=""> --Select--</option>
+                            <option value="1">
+                                1 Door (1 Moving Door)
+                            </option>
+                            <option value="2">
+                                2 Doors (2 Moving Doors)
+                            </option>
+                            <option value="2">
+                                2 Doors (1 Moving Door , 1 Fixed Door)
+                            </option>
+                            <option value="4">
+                                4 Doors (2 Moving Doors , 2 FixedDoors)
+                            </option>
+                            <option value="2">
+                                2 Doors Telescopic (2 Moving Doors)
+                            </option>
+                            <option value="3">
+                                3 Doors Telescopic (2 Moving Doors , 1 Fixed Door)
+                            </option>
+                            <option value="4">
+                                4 Doors Telescopic (4 Moving Doors)
+                            </option>
+                            <option value="6">
+                                6 Doors Telescopic (4Moving Doors , 2 Fixed Doors)
+                            </option>
+                        </select>
+                    </div>
+                    <div class="detail" id="type-detail">
+                        Select the number and type of doors
+                    </div>
+                </div>
+                <div id="part2">
+                    <div class="input-label">
+                        operator
+                    </div>
+                    <div class="input">
+                        <select id="operatorType" ng-model="selectedoperator" ng-options="x.name for x in operators">
+                        </select>
+                    </div>
+                    <div class="detail" id="op-detail">
+                        Select the type of operator
+                    </div>
+                    <div class="input-label">
+                        Frame Type
+                    </div>
+                    <div class="input">
+                        <select id="frameType" onchange="setFrameType()" ng-model="selectedframe"
+                            ng-options="x.name for x in frameType">
+                        </select>
+                    </div>
+                    <div class="detail" id="frame-detail">
+                        Select the type of frame
+                    </div>
+                    <div class="input-label">
+                        Glass Type
+                    </div>
+                    <div class="input">
+                        <select id="glassType" onchange="setGlassType()" ng-model="selectedglass"
+                            ng-options="x.name for x in glassType">
+                        </select>
+                    </div>
+                    <div class="detail" id="glass-detail">
+                        Select the type of glass
+                    </div>
+                </div>
+                <div id="part3">
+                    <button id="btn">Display Animation and Invoice Calculation</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="display-animation">
+
+            <div class="anm0">
+                Animation
+            </div>
+            <div class="anm1">
+                <div id="divsetheight"></div>
+                <div id="divimgtop">
+                    <img id="imgtop" src="arrows/up.png" alt="">
+                </div>
+                <div id="divtxt">
+                    <div id="txt">
+                        {{height + " cm"}}
+                    </div>
+                </div>
+                <div id="divimgdown">
+                    <img id="imgdown" src="arrows/down.png" alt="">
+                </div>
+            </div>
+            <div class="anm2">
+                <div id="top"></div>
+                <div id="center">
+                    <div id="op1">
+                        <div id="sensor"></div>
+                    </div>
+                    <div id="op2"></div>
+                    <div id="op3"></div>
+                </div>
+                <div id="bottom">
+                    <div id="d1"></div>
+                    <div id="d2" class="door"></div>
+                    <div id="d3" class="door"></div>
+                    <div id="d4" class="door"></div>
+                    <div id="d5" class="door"></div>
+                    <div id="d6" class="door"></div>
+                    <div id="d7" class="door"></div>
+                    <div id="d8"></div>
+                </div>
+            </div>
+            <div class="setwidth"></div>
+            <div class="anm3">
+                <div id="divimgleft">
+                    <img id="imgleft" src="arrows/left.png" alt="">
+                </div>
+                <div id="wtxt"></div>
+                <div id="divimgright">
+                    <img id="imgright" src="arrows/right.png" alt="">
+                </div>
+            </div>
+            <div id="move-again">
+                <button id="movebtn" onclick="move()">
+                    Move Again
+                </button>
+            </div>
+        </div>
+
+
+        <div id="display-invoice">
+            <div id="invoice">
+                Invoice
+            </div>
+            <table>
+                <tr>
+                    <td>Item Discription</td>
+                    <td>Quantity</td>
+                    <td>Unit Price</td>
+                    <td>Amount</td>
+                </tr>
+                <tr>
+                    <td>{{selectedoperator.name}} </td>
+                    <td>1</td>
+                    <td>{{selectedoperator.fee}} </td>
+                    <td>{{selectedoperator.fee}}</td>
+                </tr>
+                <tr>
+                    <td>{{selectedframe.name}}</td>
+                    <td> {{doorstype}}</td>
+                    <td>{{selectedframe.fee}}</td>
+                    <td>{{selectedframe.fee * doorstype}}</td>
+                </tr>
+                <tr>
+                    <td>{{selectedglass.name}}</td>
+                    <td>{{(width/100) * (height/100) + " m2"}}</td>
+                    <td>{{selectedglass.fee}}</td>
+                    <td>{{(width/100) * (height/100) * selectedglass.fee}}</td>
+                </tr>
+                <tr>
+                    <td>Installation</td>
+                    <td colspan="2"></td>
+                    <td> {{(((width/100) * (height/100) * installation.glass)+(installation.opt))}} </td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2" class="total"></td>
+                    <td class="total">Subtotal</td>
+                    <td class="total"> {{
+                        selectedoperator.fee + (selectedframe.fee * doorstype) +
+                        ((width/100) * (height/100) * selectedglass.fee) +
+                        (((width/100) * (height/100) * installation.glass)+(installation.opt))}}
+                    </td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2" class="total"></td>
+                    <td class="total">Tax(5%)</td>
+                    <td class="total">{{.05*(selectedoperator.fee + (selectedframe.fee * doorstype) +
+                        ((width/100) * (height/100) * selectedglass.fee) +
+                        (((width/100) * (height/100) * installation.glass)+(installation.opt)))}}
+                    </td>
+                </tr>
+                <tr class="total">
+                    <td colspan="2" class="total"></td>
+                    <td class="total">Total</td>
+                    <td class="total"> {{ "$ " + (1.05*(selectedoperator.fee + (selectedframe.fee * doorstype) +
+                        ((width/100) * (height/100) * selectedglass.fee) +
+                        (((width/100) * (height/100) * installation.glass)+(installation.opt))))}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <SCript src="script.js"></SCript>
+
+</body>
+
+</html>

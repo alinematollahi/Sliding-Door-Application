@@ -1,0 +1,527 @@
+
+/* Defining CSS variables */
+:root {
+    --w: 100px;
+    --h1: 100px;
+    --h: 100px;
+    --hop: 100px;
+    --hgeneral: 100px;
+    --hanm1: 100px;
+    --htop: 100px;
+    --hup: 100px;
+    --himgtop: 100px;
+    --htxt: 100px;
+    --himgdown: 100px;
+    --hdivtxt: 100px;
+    --wgeneral: 100px;
+    --wdivleft: 100px;
+    --wmarginright: 100px;
+    --wborderleftd2: 1;
+    --wborderleftd3: 1;
+    --wborderleftd4: 1;
+    --wborderleftd5: 1;
+    --wborderleftd6: 1;
+    --wborderleftd7: 1;
+    --wbordertopd2: 1;
+    --wbordertopd3: 1;
+    --wbordertopd4: 1;
+    --wbordertopd5: 1;
+    --wbordertopd6: 1;
+    --wbordertopd7: 1;
+    --wsensor: 1;
+    --hsensor: 1;
+    --sensortop: 1;
+    --sensorleft: 1;
+    --wthd1: 100px;
+    --wthd2: 100px;
+    --wthd3: 100px;
+    --wthd4: 100px;
+    --wthd5: 100px;
+    --wthd6: 100px;
+    --wthd7: 100px;
+    --wthd8: 100px;
+    --color: rgba(224, 255, 255, 0.3);
+    --borderColor: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+}
+
+/* start part */
+
+#start {
+    width: 97vw;
+    border: solid rgb(42, 9, 78) 0.5vw;
+    margin: 3vw auto;
+    background-color: rgba(155, 218, 218, 0.5);
+    border-radius: 3vw;
+    box-sizing: border-box;
+}
+
+#start-part1 {
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 7vh;
+    color: rgb(42, 9, 78);
+}
+
+#start-part2 {
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 5vh;
+    color: rgb(42, 9, 78);
+}
+
+#start-part2 button {
+    display: block;
+    width: 25%;
+    height: 10vw;
+    border: none;
+    margin: 5vh auto;
+    background-color: rgba(42, 9, 78, 1);
+    color: white;
+    border-radius: 0.75vw;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0.35vh 0.35vw 0.35vh 0.35vh rgba(98, 102, 117, 0.9);
+}
+
+/* inputs part */
+
+#input-container {
+    width: 97vw;
+    border: solid rgb(42, 9, 78) 0.5vw;
+    height: auto;
+    overflow: auto;
+    margin: 3vw auto;
+    background-color: rgb(210, 214, 214);
+    border-radius: 3vw;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+}
+
+#part0 {
+    width: 100%;
+    text-align: center;
+    font-size: 6vh;
+    color: rgb(42, 9, 78);
+}
+
+#part1 {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+
+#part2 {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+
+#part3 {
+    width: 100%;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+
+.input-label {
+    font-size: 3vh;
+    margin-left: 11%;
+    color: rgb(42, 9, 78);
+}
+
+.input input,
+.input select {
+    width: 80%;
+    height: 5vh;
+    margin-left: 10%;
+    border: solid rgb(42, 9, 78) 0.25vw;
+    border-radius: 1vw;
+}
+
+.input input:focus,
+.input select:focus {
+    border: solid rgba(42, 9, 78, 0.75) 0.25vw;
+    border-radius: 1vw;
+    outline: none;
+}
+
+.detail {
+    margin-left: 11%;
+    margin-bottom: 1vh;
+    color: grey;
+    cursor: auto;
+}
+
+#part3 button {
+    display: block;
+    min-width: 50%;
+    padding: 0 1vmax;
+    min-height: 3vw;
+    border: none;
+    margin: 0 auto;
+    background-color: rgba(42, 9, 78, 1);
+    color: white;
+    border-radius: 0.75vw;
+    font-size: 2.5vmax;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0.35vh 0.35vw 0.35vh 0.35vh rgba(98, 102, 117, 0.9);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* animation part */
+
+#display-animation {
+    clear: both;
+    margin: 3vw auto;
+    background-color: rgba(155, 218, 218, 0.5);
+    height: auto;
+    width: 97vw;
+    border: solid rgb(42, 9, 78) 0.5vw;
+    border-radius: 3vw;
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+    opacity: 0;
+}
+
+.anm0 {
+    width: 100%;
+    text-align: center;
+    font-size: 6vh;
+    color: rgb(42, 9, 78);
+    margin-bottom: 1vh;
+}
+
+.anm1 {
+    float: left;
+    height: var(--hanm);
+    width: var(--wdivleft);
+
+}
+
+#divsetheight {
+    height: var(--hup);
+
+}
+
+#divimgtop {
+    direction: rtl;
+    height: var(--himgtop);
+}
+
+#divtxt {
+    text-align: right;
+    height: var(--hdivtxt);
+}
+
+#txt {
+    position: relative;
+    top: var(--htxt);
+
+}
+
+#divimgdown {
+    direction: rtl;
+    height: var(--himgdown);
+}
+
+#imgtop {
+    width: 5vh;
+    height: 5vh;
+}
+
+#imgdown {
+    display: block;
+    width: 5vh;
+    height: 5vh;
+    position: relative;
+    bottom: 0;
+
+}
+
+.anm2 {
+    float: left;
+    width: var(--wgeneral);
+    height: var(--hanm);
+    background: url('arrows/st.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.setwidth {
+    float: left;
+    width: var(--wmarginright);
+    height: var(--hanm);
+
+
+
+}
+
+.anm3 {
+    margin: 0 var(--wdivleft);
+    margin-bottom: 3vh;
+    float: left;
+    width: var(--wgeneral);
+    height: auto;
+
+
+}
+
+#divimgleft {
+    float: left;
+    width: 20%;
+    margin-left: 5%;
+}
+
+#wtxt {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#divimgright {
+    float: left;
+    width: 20%;
+    margin-right: 5%;
+
+}
+
+#imgleft {
+    width: 5vh;
+    height: 5vh;
+}
+
+#imgright {
+    display: block;
+    float: right;
+    width: 5vh;
+    height: 5vh;
+}
+
+#top {
+    width: 100%;
+    height: var(--htop);
+    background: url('arrows/wall.png');
+}
+
+#center {
+    width: 100%;
+    height: var(--hop);
+}
+
+#bottom {
+    width: 100%;
+    height: var(--hgeneral);
+}
+
+#op1 {
+    float: left;
+    width: 5%;
+    height: var(--hop);
+    background: url('arrows/wall.png');
+}
+
+#sensor {
+    width: var(--wsensor);
+    height: var(--hsensor);
+    position: relative;
+    top: var(--sensortop);
+    left: var(--sensorleft);
+    background-color: black;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    z-index: 2;
+}
+
+#op2 {
+    float: left;
+    width: 90%;
+    height: var(--hop);
+    background-color: #a0a0a0;
+}
+
+#op3 {
+    float: left;
+    width: 5%;
+    height: var(--hop);
+    background: url('arrows/wall.png');
+}
+
+#d1 {
+    float: left;
+    width: var(--wthd1);
+    height: var(--hgeneral);
+    background: url('arrows/wall.png');
+    position: relative;
+    box-sizing: border-box;
+}
+
+#d2 {
+    float: left;
+    width: var(--wthd2);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd2);
+    border-bottom-width: var(--wbordertopd2);
+    border-left-width: var(--wborderleftd2);
+    border-right-width: var(--wborderleftd2);
+
+}
+
+#d3 {
+    float: left;
+    width: var(--wthd3);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd3);
+    border-bottom-width: var(--wbordertopd3);
+    border-left-width: var(--wborderleftd3);
+    border-right-width: var(--wborderleftd3);
+}
+
+#d4 {
+    float: left;
+    width: var(--wthd4);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd4);
+    border-bottom-width: var(--wbordertopd4);
+    border-left-width: var(--wborderleftd4);
+    border-right-width: var(--wborderleftd4);
+
+}
+
+#d5 {
+    float: left;
+    width: var(--wthd5);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd5);
+    border-bottom-width: var(--wbordertopd5);
+    border-left-width: var(--wborderleftd5);
+    border-right-width: var(--wborderleftd5);
+}
+
+#d6 {
+    float: left;
+    width: var(--wthd6);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd6);
+    border-bottom-width: var(--wbordertopd6);
+    border-left-width: var(--wborderleftd6);
+    border-right-width: var(--wborderleftd6);
+}
+
+#d7 {
+    float: left;
+    width: var(--wthd7);
+    height: var(--hgeneral);
+    background-color: var(--color);
+    position: relative;
+    box-sizing: border-box;
+    border: solid;
+    border-color: var(--borderColor);
+    border-top-width: var(--wbordertopd7);
+    border-bottom-width: var(--wbordertopd7);
+    border-left-width: var(--wborderleftd7);
+    border-right-width: var(--wborderleftd7);
+}
+
+#d8 {
+    float: left;
+    width: var(--wthd8);
+    height: var(--hgeneral);
+    background: url('arrows/wall.png');
+    position: relative;
+    box-sizing: border-box;
+}
+
+#move-again button {
+    display: block;
+    width: 20%;
+    min-height: 3vmax;
+    border: none;
+    margin: 5vh auto;
+    background-color: rgba(42, 9, 78, 1);
+    color: white;
+    border-radius: 0.75vw;
+    font-size: 2.5vmax;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0.35vh 0.35vw 0.35vh 0.35vh rgba(98, 102, 117, 0.9);
+}
+
+/* invoice patr */
+
+#display-invoice {
+    width: 97vw;
+    margin: 3vw auto;
+    background-color: rgba(155, 218, 218, 0.5);
+    border: solid rgb(42, 9, 78) 0.5vw;
+    border-radius: 3vw;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+}
+
+#invoice {
+    width: 100%;
+    text-align: center;
+    font-size: 6vh;
+    color: rgb(42, 9, 78);
+    margin-bottom: 1vh;
+}
+
+table {
+    border: rgb(7, 36, 36) 2px solid;
+    border-collapse: collapse;
+    margin: 5vh auto;
+}
+
+td {
+    border: rgb(58, 17, 39) 2px solid;
+    width: 20%;
+    text-align: center;
+}
+
+.total {
+    border: 0;
+    text-align: right;
+}
