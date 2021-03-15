@@ -10,5 +10,37 @@ This video shows performance of application:
 target="_blank"><img src="arrows/pre-video.jpg" 
 alt="Play Video" border="10" /></a>
 
+# Starting page
 
+<img src="arrows/1.JPG">
 
+# Getting door characteristics
+
+User can chose dimensions, type, automatic operator brand, frame color and glass color.
+
+<img src="arrows/2.JPG">
+
+# Validation
+
+If user drop a part or the dimensions be out of range , the hint text color will change to red.
+
+<img src="arrows/3.JPG">
+
+# Showing animation and invoice
+
+If the characteristics are approved, animation box and invoice box will show.
+
+At first, animation plays automatically, then user can play again by pushing "move again" button.
+Furthermore, user can change characteristics and see differences.
+
+<h4>Animation:</h4>
+
+<img src="arrows/5.JPG">
+
+<h4>Invoice:</h4>
+
+<img src="arrows/7.JPG">
+
+<h4>Examples of different characteristics</h4>
+
+<img src="arrows/21.jpg">
