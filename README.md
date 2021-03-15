@@ -33,7 +33,7 @@ If the characteristics are approved, animation box and invoice box will show.
 At first, animation plays automatically, then user can play again by pushing "move again" button.
 Furthermore, user can change characteristics and see differences.
 
-<h2>Animation:</h2>
+<h3>Animation:</h3>
 
 <img src="arrows/5.JPG">
 
