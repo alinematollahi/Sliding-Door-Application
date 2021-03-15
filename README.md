@@ -33,14 +33,14 @@ If the characteristics are approved, animation box and invoice box will show.
 At first, animation plays automatically, then user can play again by pushing "move again" button.
 Furthermore, user can change characteristics and see differences.
 
-<h4>Animation:</h4>
+<h2>Animation:</h2>
 
 <img src="arrows/5.JPG">
 
-<h4>Invoice:</h4>
+<h2>Invoice:</h2>
 
 <img src="arrows/7.JPG">
 
-<h4>Examples of different characteristics</h4>
+<h2>Examples of different characteristics:</h2>
 
 <img src="arrows/21.jpg">
