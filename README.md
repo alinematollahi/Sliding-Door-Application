@@ -37,10 +37,10 @@ Furthermore, user can change characteristics and see differences.
 
 <img src="arrows/5.JPG">
 
-<h2>Invoice:</h2>
+<h3>Invoice:</h3>
 
 <img src="arrows/7.JPG">
 
-<h2>Examples of different characteristics:</h2>
+<h3>Examples of different characteristics:</h3>
 
 <img src="arrows/21.jpg">
