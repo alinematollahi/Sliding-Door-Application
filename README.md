@@ -2,7 +2,7 @@
 
 This project is an Automatic Sliding Door Application to simulation and calculate prices.
 
-I utilized some technologies like HTML, CSS, JavaScript and Angular.js
+I utilized some technologies like HTML, CSS, JavaScript, Git and Angular.js
 
 This video shows performance of application:
 
